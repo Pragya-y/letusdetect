@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Result of Detection</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+
+<link rel="stylesheet" href="{{ url_for('static', filename='stylesheet.css') }}">
+
+</head>
+<body >
+    <header>
+        <div class="inner-header">
+        <div class="logo">
+            <a href="javascript:void(0)">
+                <img src="{{ url_for('static', filename='logo.png') }}" alt="Logo">
+            </a>
+        </div>
+        <ul class="menu">
+            
+                <li><a href="file:///C:/Users/PC.DESKTOP-946V3DR.000/Desktop/letusdetect/main.html">Home</a></li>
+                <li><a href="javascript:void(0)">Lets Detect</a></li>
+                <li><a href="https://www.purdueglobal.edu/blog/student-life/valuable-health-wellness-blogs/">Blog</a></li>
+                <li><a href="https://blog.feedspot.com/home_remedies_blogs/">Home Remedy</a></li>
+                
+        </ul>
+        <ul class="menu-2">
+            
+                <li class="Doctors"><a href="https://www.practo.com/delhi/doctors"><b>Connect with Doctors</b></a></li>
+                
+                
+        </ul>
+        </div>
+
+    </header>
+ <section class="result">
+    <div class="card" style="text-align: center; margin-left: 100px; margin-right: 100px; margin-top: 40px;">
+        <div class="card-header">
+            Report
+        </div>
+        <div class="card-body">
+            <h5 class="card-title">{{data}}</h5>
+            <p class="card-text">Based On Your Selected Symptoms, You might be Suffering From:- {{data}} (consult nearest doctor too)</p>
+            <a href="http://127.0.0.1:5000" class="btn btn-primary">Back</a>
+            <a href="/chat_app.py" action="//" class="btn btn-primary">home remedy</a>
+            
+    </div>
+<!--Chat bot-->
+<button onclick="openChatbotPopup()">Open Chatbot</button>
+
+<div id="chatbot-popup">
+  <iframe src="http://127.0.0.1:7860" width="100%" height="100%"></iframe>
+</div>
+
+<script>
+  function openChatbotPopup() {
+    var chatbotPopup = document.getElementById("chatbot-popup");
+    chatbotPopup.style.display = "block";
+  }
+</script>
+<!--Chat bot-->
+</section>
+
+ <footer>
+    <div style="padding: 30px;" class="footer-inner">
+        
+        <div class="footerbox">
+        <div class="footerbox-inner">
+         <img class="footerimg" src="{{ url_for('static', filename='logo.png') }}" alt=""><img src="" alt="Bulb">
+         <p>“Time and health are two precious assets that we don't recognize and appreciate until they have been depleted.”</p>
+    
+    </div></div> 
+    <div class="footerbox">
+        <div class="footerbox-inner">
+            <h3>Useful Links</h3>
+            <ul>
+                <li><a style = "color: white;" href="file:///C:/Users/PC.DESKTOP-946V3DR.000/Desktop/letusdetect/main.html">Home</a></li>
+                <li><a style = "color: white;" href="https://www.purdueglobal.edu/blog/student-life/valuable-health-wellness-blogs/">Blog</a></li>
+                <li><a style = "color: white;" href="https://blog.feedspot.com/home_remedies_blogs/">Home Remedy</a></li>
+                <li><a style = "color: white;" href=" https://www.google.com/search?q=doctor%20hospital&rlz=1C1CHZN_enIN984IN984&ei=x9WzY-OLIbCTseMPucaioA8&ved=2ahUKEwjFjoON7ar8AhUqTWwGHdk6APQQvS56BAgKEAE&uact=5&oq=doctor+hospital&gs_lcp=Cgxnd3Mtd2l6LXNlcnAQAzIICAAQsQMQkQIyBQgAEIAEMgUIABCABDIFCAAQgAQyBQgAEIAEMgUIABCABDIFCAAQgAQyCwguEIAEEMcBEK8BMgUIABCABDIFCAAQgAQ6CggAEEcQ1gQQsAM6DggAEIAEELEDEIMBEMkDOggILhCxAxCABDoHCC4QsQMQQzoKCC4QsQMQ1AIQQzoICAAQsQMQgwE6CAgAEIAEELEDOgQIABBDOgUIABCRAjoICAAQyQMQkQI6CwguEIAEELEDENQCSgQIQRgASgQIRhgAUKcFWI0eYIcgaAFwAXgAgAGSAYgBvwmSAQMwLjmYAQCgAQHIAQjAAQE&sclient=gws-wiz-serp&tbs=lf:1,lf_ui:2&tbm=lcl&rflfq=1&num=10&rldimm=12814821225413040950&lqi=Cg9kb2N0b3IgaG9zcGl0YWxaGSIPZG9jdG9yIGhvc3BpdGFsKgYIAxAAEAGSAQhob3NwaXRhbKoBFxABKhMiD2RvY3RvciBob3NwaXRhbCgA&sa=X&rlst=f#rlfi=hd:;si:13455264666189467052,l,Cg9kb2N0b3IgaG9zcGl0YWxI4t2ZwOWAgIAIWh8QABABGAEiD2RvY3RvciBob3NwaXRhbCoGCAMQABABkgERZ3luZWNvbG9naXN0X29ubHmaASNDaFpEU1VoTk1HOW5TMFZKUTBGblNVUmphM1Z1T0ZSUkVBRaoBFxABKhMiD2RvY3RvciBob3NwaXRhbCgA;mv:[[28.7567238,77.1445148],[28.6851206,77.0540817]]">Doctors</a></li>
+               
+                </li>
+                
+            </ul>
+        </div></div> 
+
+ <div class="footerbox">
+  <div class="footerbox-inner">
+   <h3>Community</h3>
+   <ul>
+    <li><a style= "color: white;"href="https://www.healthhelp.com/">Help Center</a></li>
+    <li><a style= "color: white;"href="https://rayusradiology.com/partners/hospital-partnerships/">Partners</a></li>
+    
+    <li><a style= "color: white;"href="https://www.everydayhealth.com/newsletter-subscriptions/signup/">Newsletter</a></li>
+    
+</ul>
+</div></div>  
+
+<div class="footerbox">
+    <div class="footerbox-inner">
+        <a style= "text-decoration: none;"href="javascript:void(0)"><h3>Subscribe Now</h3></a>
+     
+  </div></div>     
+<div class="footerbox">
+    <div class="footerbox-inner">
+     
+
+</div></div> 
+<span class="foot">© 2022 Lets Us Detect, All rights reserved.</span>
+</div>
+
+</footer>		
+
+</body>            
+</html>
+
+    

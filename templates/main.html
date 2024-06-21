@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>LET US DETECT</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+
+<link rel="stylesheet" href="{{ url_for('static', filename='stylesheet.css') }}">
+
+
+</head>
+<body >
+    <header>
+        <div class="inner-header">
+        <div class="logo">
+            <a href="javascript:void(0)">
+                <img src="{{ url_for('static', filename='logo.png') }}" alt="Logo">
+            </a>
+        </div>
+        <ul class="menu">
+            
+                <li><a href="file:///C:/Users/PC.DESKTOP-946V3DR.000/Desktop/letusdetect/main.html">Home</a></li>
+                <li><a href="javascript:void(0)">Lets Detect</a></li>
+                <li><a href="https://www.purdueglobal.edu/blog/student-life/valuable-health-wellness-blogs/">Blog</a></li>
+                <li><a href="https://9972b47fd39e5cfe00.gradio.live/">Home Remedy</a></li>
+                
+        </ul>
+        <ul class="menu-2">
+            
+                <li class="Doctors"><a href="https://www.practo.com/delhi/doctors"><b>Connect with Doctors</b></a></li>
+                
+                
+        </ul>
+        </div>
+
+    </header>
+<!--banner-->
+    <div class="banner">
+        <div class="inner-banner">
+            <div class="text">
+                <h2>Discover, Find, <span><p>Cure Disease</p></span>
+                Asap!</h2>
+                
+                </div>
+
+            <div class="imgslider"><a href="javascript:void(0)">
+                <img src="{{ url_for('static', filename='bann.png') }}" alt="Banner">
+            </a>
+                </div>
+                
+
+           
+        </div>
+    </div>
+<!-- steps-->
+<div class="how-it">
+    <h4>HOW IT WORK ----</h4>
+    <h1>Steps to detect the disease you feeling</h1>
+    <div class="how-wrp">
+       <div class="how-box">
+        <img src="{{ url_for('static', filename='bulb.jpg') }}" alt="Bulb">
+           
+            <h3>STEP 1</h3>
+            <p>List down the abnormalities you are feeling currentlty.</p>
+        
+              </div>
+  
+   <div class="how-box">
+    <img src="{{ url_for('static', filename='bulb.jpg') }}" alt="Bulb">
+       
+        <h3>STEP 2</h3>
+        <p>Select the option below in the list so that we can provide you with a correct answer.</p>
+    
+          </div>
+
+<div class="how-box">
+    <img src="{{ url_for('static', filename='bulb.jpg') }}" alt="Bulb">
+   
+    <h3>STEP 3</h3>
+    <p>After the result either use the home remedies that we provide or contact to the doctor immediatly.</p>
+
+      </div>
+
+
+</div>
+
+</div>
+
+<!-- detection-->
+<div class="detect" >
+    <div class="col-md-5  mx-auto my-">
+        <h4 class="display-4 font-weight-normal" style="padding-top:5px ;">Enter Symptoms</h4>
+    </div>
+
+
+    <form method="POST" action="/" style="margin: 100px;">
+
+        <div class="form-row">
+            <div class="col">
+                <label for="exampleFormControlSelect1">Symptoms_1</label>
+
+                <select class="form-control" id="s1" name="s1">
+                    {% for i in data %}
+
+                    <option>{{ i }}</option>
+                    {% endfor %}
+
+                </select>
+            </div>
+            <div class="col">
+                <label for="exampleFormControlSelect1">Symptoms_2</label>
+
+                <select class="form-control" id="s2" name="s2">
+                    {% for i in data %}
+
+                    <option>{{ i }}</option>
+                    {% endfor %}
+
+                </select>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="exampleFormControlSelect1">Symptoms_3</label>
+
+            <select class="form-control" id="s3" name="s3">
+                {% for i in data %}
+
+                <option>{{ i }}</option>
+                {% endfor %}
+
+            </select>
+        </div>
+        <div class="form-row">
+            <div class="col">
+                <label for="exampleFormControlSelect1">Symptoms_4</label>
+
+                <select class="form-control" id="s4" name="s4">
+                    {% for i in data %}
+
+                    <option>{{ i }}</option>
+                    {% endfor %}
+
+                </select>
+            </div>
+
+            <div class="col">
+                <label for="exampleFormControlSelect1">Symptoms_5</label>
+
+                <select class="form-control" id="s5" name="s5">
+                    {% for i in data %}
+
+                    <option>{{ i }}</option>
+                    {% endfor %}
+
+                </select>
+            </div>
+        </div>
+
+        <button type="submit" class="btn btn-primary" style="margin-left: 20px; margin-top: 30px; background-color: white ;color: #e93427;">Submit</button>
+    </form>
+
+</div>		
+<footer>
+    <div class="footer-inner">
+        
+        <div class="footerbox">
+        <div class="footerbox-inner">
+         <img class="footerimg" src="{{ url_for('static', filename='logo.png') }}" alt="Footering">
+         <p>“Time and health are two precious assets that we don't recognize and appreciate until they have been depleted.”</p>
+    
+    </div></div> 
+    <div class="footerbox">
+        <div class="footerbox-inner">
+            <h3>Useful Links</h3>
+            <ul>
+                <li><a style = "color: white;" href="file:///C:/Users/PC.DESKTOP-946V3DR.000/Desktop/letusdetect/main.html">Home</a></li>
+                <li><a style = "color: white;" href="https://www.purdueglobal.edu/blog/student-life/valuable-health-wellness-blogs/">Blog</a></li>
+                <li><a style = "color: white;" href="https://blog.feedspot.com/home_remedies_blogs/">Home Remedy</a></li>
+                <li><a style = "color: white;" href=" https://www.google.com/search?q=doctor%20hospital&rlz=1C1CHZN_enIN984IN984&ei=x9WzY-OLIbCTseMPucaioA8&ved=2ahUKEwjFjoON7ar8AhUqTWwGHdk6APQQvS56BAgKEAE&uact=5&oq=doctor+hospital&gs_lcp=Cgxnd3Mtd2l6LXNlcnAQAzIICAAQsQMQkQIyBQgAEIAEMgUIABCABDIFCAAQgAQyBQgAEIAEMgUIABCABDIFCAAQgAQyCwguEIAEEMcBEK8BMgUIABCABDIFCAAQgAQ6CggAEEcQ1gQQsAM6DggAEIAEELEDEIMBEMkDOggILhCxAxCABDoHCC4QsQMQQzoKCC4QsQMQ1AIQQzoICAAQsQMQgwE6CAgAEIAEELEDOgQIABBDOgUIABCRAjoICAAQyQMQkQI6CwguEIAEELEDENQCSgQIQRgASgQIRhgAUKcFWI0eYIcgaAFwAXgAgAGSAYgBvwmSAQMwLjmYAQCgAQHIAQjAAQE&sclient=gws-wiz-serp&tbs=lf:1,lf_ui:2&tbm=lcl&rflfq=1&num=10&rldimm=12814821225413040950&lqi=Cg9kb2N0b3IgaG9zcGl0YWxaGSIPZG9jdG9yIGhvc3BpdGFsKgYIAxAAEAGSAQhob3NwaXRhbKoBFxABKhMiD2RvY3RvciBob3NwaXRhbCgA&sa=X&rlst=f#rlfi=hd:;si:13455264666189467052,l,Cg9kb2N0b3IgaG9zcGl0YWxI4t2ZwOWAgIAIWh8QABABGAEiD2RvY3RvciBob3NwaXRhbCoGCAMQABABkgERZ3luZWNvbG9naXN0X29ubHmaASNDaFpEU1VoTk1HOW5TMFZKUTBGblNVUmphM1Z1T0ZSUkVBRaoBFxABKhMiD2RvY3RvciBob3NwaXRhbCgA;mv:[[28.7567238,77.1445148],[28.6851206,77.0540817]]">Doctors</a></li>
+               
+                </li>
+                
+            </ul>
+        </div></div> 
+
+ <div class="footerbox">
+  <div class="footerbox-inner">
+   <h3>Community</h3>
+   <ul>
+    <li><a style= "color: white;"href="https://www.healthhelp.com/">Help Center</a></li>
+    <li><a style= "color: white;"href="https://rayusradiology.com/partners/hospital-partnerships/">Partners</a></li>
+    
+    <li><a style= "color: white;"href="https://www.everydayhealth.com/newsletter-subscriptions/signup/">Newsletter</a></li>
+    
+</ul>
+</div></div>       
+<div class="footerbox">
+    <div class="footerbox-inner">
+        <a style= "text-decoration: none;"href="javascript:void(0)"><h3>Subscribe Now</h3></a>
+     
+  </div></div>     
+<div class="footerbox">
+    <div class="footerbox-inner">
+     
+
+</div></div> 
+<span class="foot">© 2022 Lets Us Detect, All rights reserved.</span>
+</div>
+
+</footer>			
+
+</body>            
+</html>
